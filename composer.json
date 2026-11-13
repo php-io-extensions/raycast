@@ -1,0 +1,52 @@
+{
+    "name": "php-io-extensions/raycast",
+    "type": "php-ext",
+    "description": "Rays through a grid of cells in C: RaycastGrid answers what a ray hits, what a fan of rays hits, and the picture a camera sees",
+    "keywords": [
+        "raycast",
+        "raycasting",
+        "grid",
+        "dda",
+        "php-ext"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Project Saturn Studios, LLC",
+            "email": "info@projectsaturnstudios.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.11.x-dev"
+        }
+    },
+    "php-ext": {
+        "extension-name": "raycast",
+        "priority": 30,
+        "support-zts": true,
+        "support-nts": true,
+        "os-families": [
+            "linux",
+            "darwin"
+        ],
+        "configure-options": [
+            {
+                "name": "enable-raycast",
+                "description": "Enable the raycast extension",
+                "needs-value": false
+            }
+        ]
+    }
+}
